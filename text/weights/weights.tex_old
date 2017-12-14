@@ -1,0 +1,65 @@
+\newpage
+\chapter{Obtaining the weights}
+\mbox{}\vspace{-\baselineskip}
+\label{sect:weights}
+
+The weight for each event is determined by exactly the same procedure that is described in Sect.~4 of the report~\cite{twopeg}. The weight factor is calculated according to Eq.~(4.7) from that section with the following three modifications.
+
+
+%determined according the Eq.~(4.7) of the report~\cite{twopeg}, where 
+
+
+%to the procedure described in Sect.~(4) of the report~\cite{twopeg} 
+
+
+\begin{itemize}
+\item Instead the generated value $W_{sm}$, which is assumed to be smeared, the true value $W_{non-sm}$ defined by Eq.~\ref{w_fermi_nonsm} should be used for picking up the cross section. Fig.~\ref{fig:w_smear} shows the unweighted distribution of $W_{non-sm}$ for the fixed value of $W_{sm} =1.5$~GeV (marked by the solid vertical line) and in this way illustrates the scope of the $W$-smearing. The red curve stands for the gaussian fit, while the dashed vertical lines mark the values $W_{sm}\pm3\sigma$ to illustate the distribution spread. It is seen that the majority of events deviates from the value $W_{sm} =1.5$~GeV within 75~GeV.
+\begin{figure}[!ht]
+\begin{center}
+\framebox{\includegraphics[width=8.8cm]{pictures/plot_w_smearing.pdf}}
+\end{center}
+\caption{\small The unweighted distribution of $W_{non-sm}$ for the fixed value of $W_{sm} =1.5$~GeV (marked by the solid vertical line). The red curve stands for the gaussian fit, while the dashed vertical lines mark the values $W_{sm}\pm3\sigma$ to illustate the distribution spread. The example is given for $E_{beam} = 2$~GeV and $0.4 < Q^{2}< 0.5$~GeV$^2$.}
+\label{fig:w_smear}
+\end{figure}
+
+\item To combine the structure functions into the full virtual photoproduction cross section one should use the values of  $\varepsilon_{T}$ and $\varepsilon_{L}$ calculated in the quasiLab frame according to Eq.~\eqref{eps_t} and Eq.~\eqref{eps_l}. See the discussion in Sect.~\ref{sect:ambig}.
+\item To obtain the electroproduction cross section from the virtual photoproduction one (the mode $F_{flux}=1$) the virtual photon flux $\Gamma_{v}$ should also be calculated in the quasiLab system using the effective beam energy $\widetilde{E}_{beam}^{qL}$ introduced by Eq.~\eqref{eq:in_part_qlab} and the value of $\varepsilon_{T}$ calculated according to Eq.~\eqref{eps_t} in the quasiLab frame.
+\end{itemize}
+
+
+
+
+
+
+The event distributions which illustrate this procedure are shown in Fig.~\ref{fig:weights_w_dep}. The upper left plot shows the comparison of two weighted $W$-distributions: the one shown by the green curve is produced by TWOPEG for the case of free proton, while the other shown by the blue curve is produced by TWOPEG-D for the case, when the value of $W$ is calculated in the target-at-rest-assumption according to Eq.~\eqref{W_fin_1} and thus is Fermi-smeared. The blue curve demonstrate the expected blurring of the resonance structure caused by the Fermi-smearing. The upper right plot compares the same green curve from free proton TWOPEG with the $W$-distribution produced by TWOPEG-D for the case, when the value of $W$ is the true value of the invariant mass which is calculated according to Eq.~\eqref{w_fermi_nonsm}. The latter distribution is shown by the pink curve and turned out to be in coincidence with the green curve that corresponds to the free proton case. 
+
+The comparison shown in the upper right plot of Fig.~\ref{fig:weights_w_dep} requires clarifications. As it is written in Sect.~\ref{sect:gen_var} TWOPEG-D flatly generates the smeared $W_{sm}$, while the true non-smeared $W_{non-sm}$ is calculated according to Eq.~\eqref{w_fermi_nonsm} and therefore loses the flatness of generation, being affected by the generation of the Fermi-momentum. This situation is illustrated in the bottom left plot of Fig.~\ref{fig:weights_w_dep}, where two unweighted $W$-distributions produced by TWOPEG-D are compared for the case, when the value of $W_{sm}$ is generated in the range $1.3 < W_{sm} <1.9$~GeV. The distribution of $W_{sm}$ shown by the blue curve is flat, while that of the $W_{non-sm}$ shown by the pink curve is not: it drops abruptly at the edges and has a plateau in the middle. This behavior is quite justified, since there is no one-to-one correspondence between  the values of $W_{sm}$ and $W_{non-sm}$. Each true value $W_{non-sm}$ can correspond to the sequence of  $W_{sm}$ scattered in the certain range with non-identical probabilities. The Fermi potential forces most of the values of  $W_{sm}$  to be symmentically located in the vicinity of $W_{non-sm}$ with the deviation of $50$-$100$~MeV, while the more distant spreading is significantly less probable. Hence, the value from the middle part of the $W_{non-sm}$-distribution advantages to collect the majority of the corresponded $W_{sm}$ values within the limits of the $W_{sm}$-distribution, while the edge values of $W_{non-sm}$  fail to achive it. To saturate the edge regions of $W_{non-sm}$-distribution the values of $W_{sm}$ should be generated in a wider range, as it is demonstrated in the bottom right plot of Fig.~\ref{fig:weights_w_dep}. To produce this plot $W_{sm}$ was generated in the range $1.25 < W_{sm} <2$~GeV that leads to the almost full saturation of the $W_{non-sm}$-distribution in the range $1.3 < W_{non-sm} <1.9$~GeV. The comparison of the weighted distribution shown in the upper right plot is plotted under this conditions.
+
+
+\begin{figure}[!ht]
+\begin{center}
+\framebox{\includegraphics[width=16cm]{pictures/weights_w_dep.pdf}}
+\end{center}
+\caption{\small \textit{Upper left}. The comparison of two weighted $W$-distributions: the green curve is produced by TWOPEG for the case of free proton, while the blue one is produced by TWOPEG-D for the case, when the value of $W$ is calculated in the target-at-rest-assumption according to Eq.~\eqref{W_fin_1} and thus is Fermi-smeared. \\\textit{Upper right}. The comparison of two weighted $W$-distributions: the green curve is produced by TWOPEG for the case of free proton, while the pink one is produced by TWOPEG-D for the case, when the value of $W$ is the true value of the invariant mass which is calculated according to Eq.~\eqref{w_fermi_nonsm}. The latter is plotted under the condition specified by the lower right plot.\\ \textit{Lower left}. Two unweighted $W$-distributions produced by TWOPEG-D are compared for the case, when the value of $W_{sm}$ is generated in the range $1.3 < W_{sm} <1.9$~GeV. The distribution of $W_{sm}$ is shown by the blue curve, while that of the $W_{non-sm}$ is shown by the pink curve.\\\textit{Lower right}. Two unweighted $W$-distributions produced by TWOPEG-D are compared for the case, when the value of $W_{sm}$ is generated in the wide range $1.25 < W_{sm} <2$~GeV. The distribution of $W_{sm}$ is shown by the blue curve, while that of the $W_{non-sm}$ is shown by the pink curve. \\All examples are given for the case $E_{beam} = 2$~GeV, $0.4<Q^{2}<0.5$~GeV$^{2}$}
+\label{fig:weights_w_dep}
+\end{figure}
+
+\clearpage
+
+
+
+
+The comparison introduced in the upper right plot of Fig.~\ref{fig:weights_w_dep} demonstrates that the convolution of the cross section with the dependencies of the quantities $\varepsilon_{T}$, $\varepsilon_{L}$ and $\Gamma_{v}$ on the beam energy (see the discussion in Sect.~\ref{sect:ambig}) has an insignificant influence on it. The explanation for that is the following. Due to the fact that the Fermi momentum is directed isotropic, the effective beam energy turned out to be spreaded symmetrically around the actual beam energy having the greater or smaler values with equal probabilities as it is demonstrated in Fig.~\ref{fig:e_beam_eff}. Thus in the limit of high statistics this effect drops out assuming the linear dependence of $\varepsilon_{T}$, $\varepsilon_{L}$ and $\Gamma_{v}$ on the beam energy. The actual dependence of these quantities on the beam energy is demonstrated in Fig.~\ref{fig:eps_t_dep_ebeam} and Fig.~\ref{fig:flux_dep_ebeam} and although it is non-linear, in a small beam energy range it is not very steep. Therefore, the influence of this effect on the cross section drops out in a first order and is negligible in higher orders. 
+
+
+It needs to be mentioned that TWOPEG-D was especially developed to be used in the analyses of data, where the experimental information of the target proton momentum is lost and one is forced to work in the target-at-rest assumption. The flat generation of $W_{non-sm}$ serves this purpose best. If the quality of the experimental data allows to avoid the target-at-rest assumption, one is encouraged to use the conventional free proton TWOPEG for Monte-Carlo simulation. The validity of this proposal is justified by the comparison shown in the upper right plot of Fig.~\ref{fig:weights_w_dep}.
+
+
+
+
+
+
+
+
+
+

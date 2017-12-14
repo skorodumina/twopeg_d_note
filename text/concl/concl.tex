@@ -1,0 +1,22 @@
+\chapter{Conclusions and code availability}
+\label{sect:concl}
+
+As an extension of TWOPEG~\cite{twopeg} the version TWOPEG-D that simulates the quasi-free process of double-pion electroproduction off a moving proton was developed. 
+
+TWOPEG-D is available as:
+
+\begin{itemize}
+\item a separate program TWOPEG-D that works for the case of moving protons only (the mode $F_{fermi}=1$ is fixed). 
+\\It can be downloaded at: https://github.com/gleb811/twopeg\_d.git
+\item a part of free proton TWOPEG using the mode $F_{fermi}=1$. 
+\\It can be downloaded from the same place as specified in the report~\cite{twopeg} \\(i.e., https://github.com/JeffersonLab/Hybrid-Baryons/).
+\end{itemize}
+
+
+With the option $F_{rad}=0$ (without radiative effects) these two editions produce identical results. However, in the mode $F_{rad}=1$ or 2 (with radiative effects) they differ, i.e. the first edition employs the advanced method of merging the radiative effect with the target motion, while the second edition merges them by the naive method, as it is described in more details in Sect.~\ref{sect:rad_eff}.
+
+The specifications of building and running TWOPEG-D are the same as for the free proton TWOPEG. They are described in Sect.~8 of the report~\cite{twopeg}. 
+
+The performance of TWOPEG-D was tested during the analysis of CLAS data on electron scattering off the deuteron target (the part of the ``e1e'' run period)~\cite{Skorodum_wiki_page}, where it has been used for the efficiency evaluation and the corrections due to the radiative effects and Fermi motion of the target proton. For that purpose TWOPEG-D was run in a mode that kept BOS output, which was then passed through the standard CLAS packages GSIM and recsis. In this data analysis TWOPEG-D has proven itself as an effective tool for simulating effects of the target motion for the reaction of double-pion electroproduction off protons.
+
+

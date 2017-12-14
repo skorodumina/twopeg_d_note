@@ -1,0 +1,43 @@
+
+
+\newpage
+\chapter{Introduction}
+\mbox{}\vspace{-\baselineskip}
+
+
+
+
+
+ 
+During the last decades great efforts have been performed in laboratories all over the world in order to experimentally investigate exclusive reactions of meson electroproduction off the proton. This investigation is typically carried out by detailed analyses of the experimental data with the final goal of extracting various observables. 
+
+By now exclusive reactions off the free proton have been studied in quite detail, and a lot of information about different observables for various exclusive channels have been accumulated~\cite{CLAS_DB}. Meanwhile the exclusive reactions off the deuteron, being less investigated,  start to attract more and more scientific attention, thus causing a strong demand to develop effective tools for their analysis. For this purpose a reliable Monte-Carlo simulation of the process of meson electroproduction off the deuteron target should be elaborated.
+
+This note presents the successful attempt to simulate the quasi-free process of double-pion electroproduction off the proton that moves in the deuteron. The note introduces the TWOPEG-D event generator, which is an extension of the TWOPEG that is the event generator for double-pion electroproduction off the free proton~\cite{twopeg}. In TWOPEG-D the Fermi momentum of the target proton is generated according to the Bonn potential~\cite{Machleidt:1987hj} and then naturally merged into the specific kinematics of double-pion electroproduction.
+
+The basic idea that underlies TWOPEG-D consists in the equivalence of the moving proton experiment performed with fixed laboratory beam energy to the proton at rest experiment conducted  with effective beam energy different from the laboratory one. This effective beam energy differs event by event and is determined by the boost from the Lab system to the proton rest frame and hence depends on the Fermi momentum of the target proton. 
+
+
+
+%the equivalence of the process of electron scattering on the moving proton to that on the proton at rest conducted with the effective beam energy different from the laboratory one. This effective beam energy differs event by event and is determined by the boost from the Lab system to the proton rest frame and hence depends on the Fermi momentum of the target proton. 
+
+
+
+TWOPEG-D does not simulate effects of final state interactions (FSI) due to their complexity and not fully understood nature, thus claiming only the ability to imitate the quasi-free process of double-pion electroproduction off moving protons. Beside that, other effects that are  intrinsic to experiments on the bound nucleon (such as the off-shellness of the target nucleon, possible modifications of the reaction amplitudes in the nuclear medium, etc.) are ignored in TWOPEG-D due to their minor significance.
+
+The note is organized in the following way. Section~\ref{sec:data_an_on_mov_p} describes the specific features of a deuteron target experiment, which originate from the fact that the target proton is in motion and cause difficulties during the data analysis. This section also outlines some methods for overcoming these difficulties and demonstrates the essential need for a proper Monte-Carlo simulation of the reaction under investigation. Section~\ref{sect:proc} gives the details of the event generation process and describes the multi-stage procedure of calculating the momenta of the final particles in the Lab frame. The specifity of obtaining the cross section weight is given in Sect.~\ref{sect:weights}, while the details of managing with the simulation of the radiative effects are presented in Sect.~\ref{sect:rad_eff}. The final Section~\ref{sect:concl} contains the link to the repository, where the TWOPEG-D code is located.
+
+
+It needs to be mentioned that here the reaction is assumed to occur off the proton that moves in the deuteron, but the whole procedure can also be used for any type of the nucleon motion. For instance, if a nucleon  moves inside any nucleus other than deuteron, the Bonn potential should be changed to an appropriate potential of the nucleon-nucleon interaction. Beside that, the procedure can be simply generalized for any exclusive channel.
+
+It also should be emphasized that TWOPEG-D was especially developed to be used in the analyses of data, where the experimental information of the target proton momentum is inaccessible, and one is forced to work under the target-at-rest assumption. If the quality of the experimental data allows to avoid the target-at-rest assumption, it is appropriate to start with the conventional free proton TWOPEG for the Monte-Carlo simulation. 
+
+The user is strongly encouraged to read firstly the note with the detailed description of TWOPEG~\cite{twopeg}, which sketches the kinematics of double-pion electroproduction off the proton, describes the method of event generation with weights, illustrates the quality of the data description, provides details on simulating the radiative effects, etc. This particular note should be treated as an addendum to the report~\cite{twopeg}, since it is fully devoted to the simulation of the effects related to the target motion and no material from the report~\cite{twopeg} is therefore repeated here.  
+
+
+
+
+
+
+
+

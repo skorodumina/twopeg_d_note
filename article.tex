@@ -1,0 +1,122 @@
+
+\documentclass[12pt]{report}
+\include{text/setups/setups}
+\usepackage{caption}
+\usepackage[english]{babel}
+\usepackage{lineno, blindtext}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{mdframed}
+\usepackage{enumerate}
+
+\usepackage{sectsty}
+
+\chapterfont{\fontsize{24}{15}\selectfont}
+\sectionfont{\fontsize{16}{15}\selectfont}
+\subsectionfont{\fontsize{14}{15}\selectfont}
+
+\renewcommand{\thesubsection}{\Roman{subsection}.}
+\renewcommand{\bfdefault}{bx}
+
+
+
+\usepackage{background}
+\usepackage{lipsum}% just to generate filler text
+
+\SetBgContents{CLAS12 Note 2017-014}
+\SetBgScale{1.35}
+\SetBgAngle{0}
+\SetBgOpacity{1}
+\SetBgColor{black}
+\SetBgPosition{current page.south west}
+\SetBgHshift{12cm}
+\SetBgVshift{20cm}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+
+%cases with square brackets
+ \makeatletter
+\newenvironment{sqcases}{%
+  \matrix@check\sqcases\env@sqcases
+}{%
+  \endarray\right.%
+}
+\def\env@sqcases{%
+  \let\@ifnextchar\new@ifnextchar
+  \left\lbrack
+  \def\arraystretch{1.2}%
+  \array{@{}l@{\quad}l@{}}%
+}
+\makeatother
+
+\newcommand\footnoteref[1]{\protected@xdef\@thefnmark{\ref{#1}}\@footnotemark}
+
+%\pdfminorversion=5 
+\pdfcompresslevel=9
+\pdfobjcompresslevel=9
+%\include{text/toc/toc}
+\include{text/aliases/aliases}
+
+
+
+
+
+
+
+\include{text/title_page/title}
+
+\pagebreak
+
+\begin{linenumbers}
+
+\include{text/toc/toc}
+
+\include{text/introduction/intro}
+\include{text/deut_targ_exp/deut_targ_exp}
+\include{text/procedure/procedure}
+\include{text/weights/weights}
+\include{text/radeff/radeff}
+
+\include{text/concl/concl}
+
+
+
+
+\end{linenumbers}
+
+\newpage
+\bibliographystyle{ieeetr}
+\bibliographystyle{apsrev4-1long}
+\bibliography{gen_note}
+
+
+
+
+
+
+
+\end{document}
